@@ -11,7 +11,7 @@
 
 ## Dependencies
 This program uses `experta` which is the library needed for building expert systems in python.
-please run the requirements.txt file
+please run the `requirements.txt` file
 
                 pip install -r requirements.txt
 
