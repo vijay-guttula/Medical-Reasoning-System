@@ -214,7 +214,7 @@ print("\nHi {}, Nice to meet you".format(name))
 #print("and so on")
 
 engine = FluOrCold() #object created
-print("\nOkay waste on time {}, and see what you got\n".format(name))
+print("\nOkay let's waste no time {}, and see what you got\n".format(name))
 i = 1
 while(1):
     print("What is your symptom {}?".format(i))
@@ -234,13 +234,13 @@ if ((flu_symptoms < 3) and (cold_symptoms < 3)):
     print("\n\aSorry, You must enter more symptoms {}".format(name))
 #Can't diagnose user state when the flu and cold symptoms are equal 
 elif((flu_symptoms == cold_symptoms)):
-    print("\n\aSorry, This looks ambigous, your symptoms sound like both flu and the common cold. I Suggest you please visit a doctor. Take Care {}".format(name))
+    print("\n\aSorry, This looks ambigous, your symptoms sound like both flu and the common cold. I Suggest you please visit a doctor. Take Care {}\n".format(name))
 #If the flu counter greater than cold counter, then the user has flu
 elif ((flu_symptoms >= 3) and (flu_symptoms > cold_symptoms)):
-    print ("\n\aOkay might have flu, nothing to worry about {}, please visit your doctor for medication".format(name))
+    print ("\n\aOkay might have flu, nothing to worry about {}, please visit your doctor for medication\n".format(name))
 #If the cold counter greater than flu counter, then the user has cold
 elif ((cold_symptoms >= 3) and (flu_symptoms < cold_symptoms)):
-    print ("\n\aWell, Good news, this might be just the common cold, haha, were you dusting your room today {}? Anyways nothing to worry about, take an anti-histamine and get some rest, take plenty of fluids and if the symptoms get worse or still persist, please vist a doctor, Take care {}".format(name,name))
+    print ("\n\aWell, Good news, this might be just the common cold, haha, were you dusting your room today {}? Anyways nothing to worry about, take an anti-histamine and get some rest, take plenty of fluids and if the symptoms get worse or still persist, please vist a doctor, Take care {}\n".format(name,name))
 
 
 
