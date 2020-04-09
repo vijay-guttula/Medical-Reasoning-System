@@ -196,29 +196,31 @@ class FluOrCold(KnowledgeEngine):
 flu_symptoms =0
 cold_symptoms =0
 print("Please not the inputs aren't case sensitive")
-print("\n Cold or Flu ".center(40, "*"))
+print("\n Common Cold or Flu ".center(40, "*"))
 print(" Note ".center(40, "*"))
-print (" Enter one symptom in line ".center(40, "*"))
+print (" Enter one symptom in one line ".center(40, "*"))
 print ("Enter '''That's it''' to stop and show your state ".center(40, "*"))
 name = input("Please enter you name : ")
-print("Please enter your symptoms from the following {}".format(name))
-print("Please note the following list are the examples and you need to enter any symptom like 'high fever' or 'no fever'")
-print("Did you check any Fever : 'no/mild/moderate/high fever', 'mild fever', 'no/mild/moderate/high temperature, 'no/mild/moderate/high hyerthermia', 'no/mild/moderate/high thermia'")
-print("You got any Cough : 'producing/mucus/dry cough")
-print("How's your Nose : 'stuffy/runny nose' ")
-print("How are you feeling : 'mild tiredness/fatigue/exhaustion'")
-print("You got any Headache : 'mild headache/migraine/head pain'")
-print("You feeling Dizzy : 'dizziness / no dizziness")
-print("and so on")
+
+print("\nHi {}, Nice to meet you".format(name))
+
+#print("Please note the following list are the examples and you need to enter any symptom like 'high fever' or 'no fever'")
+#print("Did you check any Fever : 'no/mild/moderate/high fever', 'no/mild/moderate/high temperature, 'no/mild/moderate/high hyerthermia', 'no/mild/moderate/high thermia'")
+#print("You got any Cough : 'producing/mucus/dry cough")
+#print("How's your Nose : 'stuffy/runny nose' ")
+#print("How are you feeling : 'mild tiredness/fatigue/exhaustion'")
+#print("You got any Headache : 'mild headache/migraine/head pain'")
+#print("You feeling Dizzy : 'dizziness / no dizziness")
+#print("and so on")
 
 engine = FluOrCold() #object created
-
+print("\nOkay waste on time {}, and see what you got\n".format(name))
 i = 1
 while(1):
     print("What is your symptom {}?".format(i))
     i += 1
     symptom = input()
-    #Exit from loop if the input equal " that's it"
+    #Exit from loop if the input equals " that's it"
     if symptom.strip().lower() == "that's it":
       break
     engine.reset()  # Prepare the engine for the execution.
@@ -227,18 +229,18 @@ while(1):
 
 #print(flu_symptoms)
 #print(cold_symptoms)
-#Check if user enter less than 3 symptoms      
+#Checks if user enter less than 3 symptoms      
 if ((flu_symptoms < 3) and (cold_symptoms < 3)):
-    print("Sorry, You must enter more symptoms {}".format(name))
-#Cann't diagnose user state when the flu and cold symptoms are equal 
+    print("\n\aSorry, You must enter more symptoms {}".format(name))
+#Can't diagnose user state when the flu and cold symptoms are equal 
 elif((flu_symptoms == cold_symptoms)):
-    print("Sorry, This looks ambigous, your symptoms sound like both flu and the common cold. I Suggest you please visit a doctor. Take Care {}".format(name))
+    print("\n\aSorry, This looks ambigous, your symptoms sound like both flu and the common cold. I Suggest you please visit a doctor. Take Care {}".format(name))
 #If the flu counter greater than cold counter, then the user has flu
 elif ((flu_symptoms >= 3) and (flu_symptoms > cold_symptoms)):
-    print ("Okay might have flu, nothing to worry about {}, please visit your doctor for medication".format(name))
+    print ("\n\aOkay might have flu, nothing to worry about {}, please visit your doctor for medication".format(name))
 #If the cold counter greater than flu counter, then the user has cold
 elif ((cold_symptoms >= 3) and (flu_symptoms < cold_symptoms)):
-    print ("Well, Good news, this might be just a small common cold, haha, were you dusting you room today {} ? Anyways nothing to worry about, take an anti-histame and get some rest, take plenty of fluids and if the symptoms get worse or they still persist, please vist a doctor, Take care {}".format(name))
+    print ("\n\aWell, Good news, this might be just the common cold, haha, were you dusting your room today {}? Anyways nothing to worry about, take an anti-histamine and get some rest, take plenty of fluids and if the symptoms get worse or still persist, please vist a doctor, Take care {}".format(name,name))
 
 
 
