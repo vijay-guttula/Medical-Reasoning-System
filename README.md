@@ -8,12 +8,12 @@ Also, if the user enters less than 3 symptoms, it asks to enter more symptoms to
 This program uses `experta` which is the library needed for building expert systems in python.
 please run the `requirements.txt` file
 
-                    $ pip install -r requirements.txt
+    $ pip install -r requirements.txt
 
 
 ### You are good to go now. Run the file.
 
-                    $ python aica.py
+    $ python aica.py
 
 ### References 
 
